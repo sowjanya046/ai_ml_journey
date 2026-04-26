@@ -1,8 +1,6 @@
 # AI_ML_Journey
 My 60-day AI/ML learning journey
 
-# AI_ML_Journey
-
 🚗 ADAS Systems Engineer with 8+ years of experience, now transitioning into AI/ML Engineering.
 
 
