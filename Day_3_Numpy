@@ -1,29 +1,3 @@
-Numpy - 
-  NumPy is a Python library used for working with arrays 
-  NumPy stands for Numerical Python.
-
-Why Use NumPy?
-In Python we have lists that serve the purpose of arrays, but they are slow to process.
-NumPy aims to provide an array object that is up to 50x faster than traditional Python lists.
-The array object in NumPy is called ndarray, it provides a lot of supporting functions that make working with ndarray very easy.
-Arrays are very frequently used in data science, where speed and resources are very important.
-
-Why is NumPy Faster Than Lists?
-Numpy uses fixed values
-NumPy arrays are stored at one continuous place in memory unlike lists, so processes can access and manipulate them very efficiently.
-This behavior is called locality of reference in computer science.
-This is the main reason why NumPy is faster than lists. Also it is optimized to work with latest CPU architectures.
-
-Lists has Size, reference Count, Object Type and Object Value.
-
-Application of Numpy:
-
-    Matlab Replacement (Mathematics)
-    Plotting
-    Backends(Pandas, Digital Photography)
-    Machine Learning applications - tensors
-
-
 import numpy as np
 
 arr = [1,2,3,4] #Python Lists
@@ -49,7 +23,62 @@ array = np.array([['A','B','C','D'],
                   ['E','F','G','H']]) #n number of Dimension means multi dimensinal Arrays
 print(array.ndim)
 
+array = np.array([[[[1,2,3],[4,5,6],[7,8,9]],
+                  [[1,2,3],[4,5,6],[7,8,9]],
+                  [[1,2,3],[4,5,6],[7,8,9]]]]) #n number of Dimension means multi dimensinal Arrays
+print(array.ndim)
+
 array = np.array([[['A','B','C',],['E','F','G'],['I','J','K']],
                   [['1','2','3'],['5','6','7'],['9','10','11']],
                   [['A','B','C'],['E','F','G'],['I','J','K']]]) #n number of Dimension means multi dimensinal Arrays
 print(array.ndim)
+
+
+#Shape
+array_1 = np.array([[[[1,2,3],[4,5,6],[7,8,9]],
+                  [[1,2,3],[4,5,6],[7,8,9]],
+                  [[1,2,3],[4,5,6],[7,8,9]]]])
+print(array_1.shape)
+
+#to get datatype
+print(array_1.dtype)
+
+#get total Size
+print(array_1.size)
+
+#Accessing and Changing Specific elements, Rows , Coloumns
+array_2 = np.array([[1,2,3,4,5,6],[7,8,9,10,11,12]])
+print(array_2)
+
+#get a specific row/coloumn
+print(array_2[1,4])
+print(array_2[0,4])
+
+#get a specific row
+print(array_2[0, : ])
+
+#get a specific Coloumn
+print(array_2[:,3 ])
+
+#Step_Index[Start:End:Index]
+print(array_2[0,0:4:2])
+
+#Create an EMpty Array
+empty_array = np.empty([5,6],dtype = int)
+print(empty_array)
+
+#Create an full array
+full_array = np.full([5,6],7)
+print(full_array)
+
+#numpy array filled with all zeros
+zero_array = np.zeros([3,3])
+print(zero_array)
+
+#numpy array filled with ones
+ones_array = np.ones([3,3])
+print(ones_array)
+
+array = np.array([[1,2,3],[4,5,6]])
+row = [4,5,6]
+print(row in array.tolist())
